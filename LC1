@@ -1,0 +1,31 @@
+public class LC1 {
+		/*	Given nums = [2, 7, 11, 15], target = 9,
+
+			Because nums[0] + nums[1] = 2 + 7 = 9,
+			return [0, 1].
+		*/
+	
+    public static int[] twoSum(int[] nums, int target) {
+        int length = nums.length;
+        for (int i=0; i<length; i++)
+        {
+        		for(int j=i+1; j<length; j++)
+        		{
+        			if(target == nums[i]+nums[j]) 
+        				{
+        				System.out.println(i+" "+j);
+        				return new int[] {i,j};
+        				}
+        		}
+        }
+        System.out.println("no matched results");
+        return new int[] {0,0};
+    }
+
+
+	public static void main (String[] args)
+	{
+		int[] nums = {1,2,3,45,6,7,8,99,5,67};
+		twoSum(nums,52);
+	}
+}
